@@ -7,7 +7,7 @@ import Checkout from './Checkout';
 import Login from './Login';
 import { useStateValue } from './StateProvider';
 import {auth} from "./firebase";
-import React, { useState, useEffect } from 'react';
+import React, {useEffect } from 'react';
 
 function App() {
   const [{user},dispatch]=useStateValue();
@@ -59,8 +59,4 @@ function App() {
     </Router>
   );
 }
-{/* we need React router */ }
-{/* {localhost.com} */ }
-{/* localhost.com/checkout */ }
-{/* localhost.com/login */ }
 export default App;

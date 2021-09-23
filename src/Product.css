@@ -10,6 +10,12 @@
     width: 100%;
     background-color:white;
     z-index: 1;
+    transition:
+    transform 250ms cubic-bezier(0.1, 0.2, 0.3, 0.4);
+}
+.product:hover{
+    transform: translateY(-5px);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .product__info{
     height: 100px;
