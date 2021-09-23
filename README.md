@@ -1,9 +1,16 @@
 # Amazon-Clone
-# Getting Started with Create React App
+Clone of Popular shopping site Amazon
+Single page react app.
+Login functionality
+Dynamic basket/cart
+Dynamic checkout functionality
+Smooth animations
+firebase for authentication ,database and hosting
 
-## Available Scripts
+###App demo link
+https://padho-2a25f.web.app
 
-In the project directory, you can run:
+### To run:
 
 Install nodejs Latest version.
 then install npx
@@ -15,5 +22,4 @@ install dependencies
 ### To run on local server 
 ### `npm start`
 
-### Demo link
-https://padho-2a25f.web.app
+
