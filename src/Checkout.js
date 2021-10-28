@@ -12,8 +12,7 @@ function Checkout() {
             <div className="checkout__left">
                 <img
                     className="checkout__ad"
-                    src={checkoutImg}
-                />
+                    src={checkoutImg}/>
                 {basket?.length === 0 ? (
                     <div>
                         <h2>Your Shopping Basket is Empty</h2>
@@ -26,16 +25,16 @@ function Checkout() {
                     <div>
                         <h2 className="checkout__title">Your Shopping Basket</h2>
                         {/* List of all check out product */}
-                            {basket?.map(item => (
-                                <CheckoutProduct
-                                    key={item.key}
-                                    id={item.id}
-                                    title={item.title}
-                                    image={item.image}
-                                    price={item.price}
-                                    rating={item.rating}
-                                />
-                            ))}
+                        {basket?.map(item => (
+                            <CheckoutProduct
+                                key={item.key}
+                                id={item.id}
+                                title={item.title}
+                                image={item.image}
+                                price={item.price}
+                                rating={item.rating}
+                            />
+                        ))}
                     </div>
                 )}
             </div>

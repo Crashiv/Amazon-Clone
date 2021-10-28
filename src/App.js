@@ -6,30 +6,30 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Checkout from './Checkout';
 import Login from './Login';
 import { useStateValue } from './StateProvider';
-import {auth} from "./firebase";
-import React, {useEffect } from 'react';
+import { auth } from "./firebase";
+import React, { useEffect } from 'react';
 
 function App() {
-  const [{user},dispatch]=useStateValue();
+  const [{ user }, dispatch] = useStateValue();
 
-  useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((authUser)=>{
-      if(authUser){
+  useEffect(() => {const unsubscribe = 
+    auth.onAuthStateChanged((authUser) => {
+      if (authUser) {
         //loggegIn
         dispatch({
-          type:"SET_USER",
-          user:authUser
+          type: "SET_USER",
+          user: authUser
         })
-      }else{
+      } else {
         //loggegOut
         dispatch({
-          type:"SET_USER",
-          user:null
+          type: "SET_USER",
+          user: null
         })
       }
     });
 
-    return ()=>{
+    return () => {
       unsubscribe();
     }
   }, []);
@@ -40,18 +40,18 @@ function App() {
         <Switch>
 
           <Route path="/checkout">
-          <Header/>
-          <Checkout/>
+            <Header />
+            <Checkout />
           </Route>
 
           <Route path="/login">
-            <Login/>
+            <Login />
           </Route>
 
           {/* Default path */}
           <Route path="/">
-          <Header/>
-            <Home/>
+            <Header />
+            <Home />
           </Route>
 
         </Switch>
